@@ -20,7 +20,7 @@ export const ProductList = styled(FlatList)`
 
 export const Product = styled.View`
   background: #fff;
-  padding: 15px 10px;
+  padding: 10px;
   border-radius: 5px;
   margin: 5px;
   flex-direction: row;
@@ -33,7 +33,8 @@ export const ProductImage = styled.Image`
 
 export const ProductTitleContainer = styled.View`
   font-size: 16px;
-  margin-left: 5px;
+  margin-left: 10px;
+  width: 160px;
 `;
 
 export const ProductTitle = styled.Text`
@@ -52,24 +53,22 @@ export const TotalContainer = styled.View`
 export const ProductSinglePrice = styled.Text`
   font-size: 12px;
   color: #a0a0b3;
-  margin-top: 8px;
+  margin: 5px 0 0;
 `;
 
 export const ProductPrice = styled.Text`
   font-weight: bold;
-  margin-top: 5px;
 
   font-size: 16px;
-  color: #e83f5b;
+  color: #057cbc;
 `;
 
 export const ProductQuantity = styled.Text`
   font-weight: bold;
-  margin-top: 5px;
   margin-right: 10px;
 
   font-size: 16px;
-  color: #e83f5b;
+  color: #057cbc;
 `;
 
 export const ActionContainer = styled.View`
@@ -81,7 +80,7 @@ export const ActionContainer = styled.View`
 `;
 
 export const ActionButton = styled.TouchableOpacity`
-  background: rgba(232, 63, 91, 0.1);
+  background: #057cbc15;
   border-radius: 5px;
   padding: 12px;
   margin-bottom: 5px;
@@ -92,7 +91,7 @@ export const TotalProductsContainer = styled.View`
   bottom: 0px;
 
   flex-direction: row;
-  background: #e83f5b;
+  background: #057cbc;
 
   padding: 20px 40px;
   justify-content: space-between;

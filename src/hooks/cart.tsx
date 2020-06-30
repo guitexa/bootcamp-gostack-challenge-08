@@ -100,7 +100,9 @@ const CartProvider: React.FC = ({ children }) => {
           JSON.stringify(newProduct),
         );
       } else {
-        setProducts(state => state.filter(product => product.id !== id));
+        products.splice(getIndex, 1);
+        setProducts([...products]);
+
         await AsyncStorage.setItem(
           '@GoMarketPlace:products',
           JSON.stringify(products),
