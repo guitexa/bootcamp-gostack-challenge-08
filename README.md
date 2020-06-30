@@ -2,13 +2,15 @@
     <img alt="GoStack" src="https://ap.imagensbrasil.org/images/2020/04/09/banner-bootcamp-gostack-11.png" style="border-radius:5px;"/>
 </p>
 
-<h3 align="center" >
-  😎 App to buy items in a Marketplace
-</h3>
+## :rocket: Challenge 08: GoMarketplace Mobile
 
 <p align="center">
 <img alt="Project working" src="https://media.giphy.com/media/VgNN1vAN0yq2v15BmL/giphy.gif" style="border-radius:5px;"/>
 </p>
+
+✔ [Go to challenge page](https://github.com/Rocketseat/bootcamp-gostack-desafios/tree/master/desafio-fundamentos-react-native)
+
+🏁 Challenge finished on June 30, 2020
 
 <p align="center">
   <img alt="Languagues" src="https://img.shields.io/github/languages/count/guitexa/bootcamp-gostack-challenge-08">
