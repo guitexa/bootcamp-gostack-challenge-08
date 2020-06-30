@@ -30,12 +30,12 @@ const CartProvider: React.FC = ({ children }) => {
 
   useEffect(() => {
     async function loadProducts(): Promise<void> {
-      const productStoraged = await AsyncStorage.getItem(
+      const storagedProducts = await AsyncStorage.getItem(
         '@GoMarketPlace:products',
       );
 
-      if (productStoraged) {
-        setProducts(JSON.parse(productStoraged));
+      if (storagedProducts) {
+        setProducts([...JSON.parse(storagedProducts)]);
       }
     }
 
@@ -116,7 +116,7 @@ const CartProvider: React.FC = ({ children }) => {
         setProducts(state => [...state, productWithQuantity]);
       }
     },
-    [products],
+    [products, increment],
   );
 
   const value = React.useMemo(
