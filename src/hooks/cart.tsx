@@ -42,23 +42,41 @@ const CartProvider: React.FC = ({ children }) => {
     loadProducts();
   }, []);
 
-  const increment = useCallback(
-    async id => {
-      const copyProducts = products;
+  const addToCart = useCallback(
+    async product => {
+      const checkIfAlreadyAdded = products.find(p => p.id === product.id);
 
-      const getIndex = copyProducts.findIndex(product => product.id === id);
-
-      if (getIndex < 0) {
-        throw new Error('Product not found');
+      if (checkIfAlreadyAdded) {
+        setProducts(
+          products.map(p =>
+            p.id === product.id ? { ...product, quantity: p.quantity + 1 } : p,
+          ),
+        );
+      } else {
+        setProducts([...products, { ...product, quantity: 1 }]);
       }
-
-      copyProducts[getIndex].quantity += 1;
-
-      setProducts([...copyProducts]);
 
       await AsyncStorage.setItem(
         '@GoMarketPlace:products',
         JSON.stringify(products),
+      );
+    },
+    [products],
+  );
+
+  const increment = useCallback(
+    async id => {
+      const newProduct = products.map(product =>
+        product.id === id
+          ? { ...product, quantity: product.quantity + 1 }
+          : product,
+      );
+
+      setProducts(newProduct);
+
+      await AsyncStorage.setItem(
+        '@GoMarketPlace:products',
+        JSON.stringify(newProduct),
       );
     },
     [products],
@@ -66,57 +84,20 @@ const CartProvider: React.FC = ({ children }) => {
 
   const decrement = useCallback(
     async id => {
-      const copyProducts = products;
+      const newProduct = products.map(product =>
+        product.id === id && product.quantity > 1
+          ? { ...product, quantity: product.quantity - 1 }
+          : product,
+      );
 
-      const getIndex = copyProducts.findIndex(product => product.id === id);
-
-      if (getIndex < 0) {
-        throw new Error('Product not found');
-      }
-
-      if (copyProducts[getIndex].quantity > 1) {
-        copyProducts[getIndex].quantity -= 1;
-
-        setProducts([...copyProducts]);
-      } else {
-        copyProducts.splice(getIndex, 1);
-        setProducts([...copyProducts]);
-      }
+      setProducts(newProduct);
 
       await AsyncStorage.setItem(
         '@GoMarketPlace:products',
-        JSON.stringify(products),
+        JSON.stringify(newProduct),
       );
     },
     [products],
-  );
-
-  const addToCart = useCallback(
-    async ({ id, title, image_url, price }) => {
-      const checkIfAlreadyAdded = products.findIndex(
-        product => product.id === id,
-      );
-
-      if (checkIfAlreadyAdded >= 0) {
-        increment(id);
-      } else {
-        const productWithQuantity = {
-          id,
-          title,
-          image_url,
-          price,
-          quantity: 1,
-        };
-
-        await AsyncStorage.setItem(
-          '@GoMarketPlace:products',
-          JSON.stringify(products),
-        );
-
-        setProducts(state => [...state, productWithQuantity]);
-      }
-    },
-    [products, increment],
   );
 
   const value = React.useMemo(

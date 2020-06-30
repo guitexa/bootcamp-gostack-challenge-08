@@ -45,12 +45,7 @@ const Dashboard: React.FC = () => {
 
   const handleAddToCart = useCallback(
     (item: Product): void => {
-      addToCart({
-        id: item.id,
-        image_url: item.image_url,
-        price: item.price,
-        title: item.title,
-      });
+      addToCart(item);
     },
     [addToCart],
   );
