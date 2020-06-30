@@ -8,7 +8,7 @@
 <img alt="Project working" src="https://media.giphy.com/media/VgNN1vAN0yq2v15BmL/giphy.gif" style="border-radius:5px;"/>
 </p>
 
-✔ [Go to challenge page](https://github.com/Rocketseat/bootcamp-gostack-desafios/tree/master/desafio-fundamentos-react-native)
+✔ [View challenge page](https://github.com/Rocketseat/bootcamp-gostack-desafios/tree/master/desafio-fundamentos-react-native)
 
 🏁 Challenge finished on June 30, 2020
 
