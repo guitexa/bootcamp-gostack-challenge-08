@@ -1,16 +1,6 @@
 <p align="center">
-    <img alt="GoStack" src="https://ap.imagensbrasil.org/images/2020/04/09/banner-bootcamp-gostack-11.png" style="border-radius:5px;"/>
+    <img alt="GoStack" src="https://storage.googleapis.com/golden-wind/bootcamp-gostack/header-desafios-new.png" style="border-radius:5px;"/>
 </p>
-
-## :rocket: Challenge 08: GoMarketplace Mobile
-
-<p align="center">
-<img alt="Project working" src="https://media.giphy.com/media/VgNN1vAN0yq2v15BmL/giphy.gif" style="border-radius:5px;"/>
-</p>
-
-✔ [View challenge page](https://github.com/Rocketseat/bootcamp-gostack-desafios/tree/master/desafio-fundamentos-react-native)
-
-🏁 Challenge finished on June 30, 2020
 
 <p align="center">
   <img alt="Languagues" src="https://img.shields.io/github/languages/count/guitexa/bootcamp-gostack-challenge-08">
@@ -41,6 +31,16 @@
   </a>
 
 </p>
+
+## :rocket: Challenge 08: GoMarketplace Mobile
+
+<p align="center">
+<img alt="Project working" src="https://media.giphy.com/media/VgNN1vAN0yq2v15BmL/giphy.gif" style="border-radius:5px;"/>
+</p>
+
+✔ [View challenge page](https://github.com/Rocketseat/bootcamp-gostack-desafios/tree/master/desafio-fundamentos-react-native)
+
+🏁 Challenge finished on June 30, 2020
 
 ## 📜 About the project
 
